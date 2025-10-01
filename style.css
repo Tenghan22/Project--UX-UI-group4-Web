@@ -1,0 +1,437 @@
+body{
+    background-image: url(background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: block;
+    padding-top: 65px;
+    background-color: rgba(255, 255, 255, 0.464);
+    height: 1000px;
+    width: 1600px;
+    border-radius: 20px;
+}
+.logo{
+    margin-top: -50px;
+}
+.logo img{
+    border-radius: 50px;
+    margin-bottom: -15px;
+    width: 100px;
+    height: 100px;
+    margin-left: 150px;
+}
+.menu ul{
+    margin-top: 20px;
+    margin-left: 70px;
+    background-color: rgba(255, 255, 255, 0.605);
+    border-radius: 25px;
+    box-shadow: 3px 5px rgba(0, 0, 0, 0.171);
+    width: 210px;
+    height: 925px;
+    float: left;
+}
+.menu ul li{
+    list-style-type: none;
+    margin-top: 30px;
+    margin-right: 35px;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: rgb(29, 147, 250);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 40px;
+    padding: 15px ;
+    display: block;
+}
+.menu ul li a:hover{
+    transition: 0.5s;
+    color: rgb(29, 147, 250);
+    background-color: rgb(252, 252, 254);
+    border-radius: 40px;
+}
+.logout {
+    font-family: 'Khmer OS Siemreap';
+    border: 5px;
+    color: red;
+    cursor: pointer;
+}
+.logout button{
+    margin-top: 330px;
+    margin-left: -40px;
+    width: 250px;
+    height: 80px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    border-top: 2px solid #ada5a5;
+    font-size: 25px;
+    color: rgb(227, 28, 28);
+}
+.container menu{
+    background-color: white;
+}
+.good{
+    margin-top: -120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+.good p{
+    margin-left:40px;
+    line-height: 5px;
+    background-color: rgba(255, 255, 255, 0.605);
+    float: left;
+    width: 450px;
+    height: 50px;
+    border-radius: 50px;
+    font-family: 'Calibri';
+    text-shadow: 3px 2px rgba(0, 0, 0, 0.197);
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+
+}
+.good button{
+   margin-top: 90px;
+   background-color: rgba(255, 255, 255, 0.605);
+   float: left;
+   display: flex;
+   justify-content: center;
+   align-items: end;
+}
+.sms{
+    padding-left: 1px;
+    margin-top: -90px;
+    margin-left: 400px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+.sms button {
+    cursor: pointer;
+    margin-right: 20px;
+    margin-left: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.605);
+}
+.sms button .badge{
+    position: absolute;
+    margin-top: -40px;
+    margin-right: -50px;
+    width: 25px;
+    height: 25px;
+    background: red;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+/* Dropdown */
+.wrap {
+  
+    position: relative;
+    display: inline-block;
+}
+
+.time {
+    font-family: 'Khmer OS Siemreap';
+    text-align: right;
+    font-size: 11px;
+    color: #777;
+    white-space: nowrap;
+    margin-left: 10px;
+}
+.title {
+    font-family: 'Khmer OS Siemreap';
+    font-weight: bold;
+    font-size: 16px;
+}
+.message {
+    font-family: 'Khmer OS Siemreap';
+    font-size: 14px;
+    color: #444;
+}
+.message1 {
+    margin-bottom: 100px;
+    cursor: pointer;
+    font-weight: 100;
+    font-family: 'Khmer OS Siemreap';
+    font-size: 14px;
+    color: #444;
+}
+.message1 ul{
+    margin-top: -10px;
+    width: 250px;
+}
+.dropdown {
+    margin-top: 8px;
+    border: 0.3px solid;
+    margin-right: 100px;
+    display: none;
+    position: absolute;
+    top: 74px;
+    right: 140px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    min-width: 250px;
+    z-index: 100;
+    padding: 12px;
+    animation: fadeIn 0.2s ease-in-out;
+}
+.dropdown0 {
+    line-height: 25px;
+    margin-top: 8px;
+    border: 0.3px solid;
+    height: 270px;
+    display: none;
+    position: absolute;
+    top: 75px;
+    right: 80px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    min-width: 300px;
+    z-index: 100;
+    padding: 12px;
+    animation: fadeIn 0.2s ease-in-out;
+}
+.dropdown1 {
+    margin-top: 8px;
+    border: 0.3px solid;
+    display: none;
+    position: absolute;
+    top: 75px;
+    right: 83px;
+    background: #fff;
+    border-radius: 12px;
+    z-index: 100;
+    padding: 12px;
+    animation: fadeIn 0.2s ease-in-out;
+}
+.dropdown.show {
+    display: block; 
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+         transform: translatex(-45px);
+        }
+    to {
+        opacity: 1; 
+        transform: translatex(-25);
+    }
+    to {
+        opacity: 2; 
+        transform: translatex(-10);
+    }
+}
+.dropdown .item {
+    line-height: 25px;
+    font-family: 'Khmer OS Siemreap';
+    background: #ffffff;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+    color: #333;
+}
+.dropdown .item:last-child { border-bottom: none; }
+.item .log-out :hover{
+    background-color: black;
+}
+/* Profile */
+.wrap img{
+    width: 50px;
+    border-radius: 50px;
+}
+.profile-pic {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.head{
+    box-shadow: 3px 5px rgba(0, 0, 0, 0.171);
+    font-family: 'Calibri';
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 60px;
+    margin-left: 40px;
+    margin-top: 20px;
+    font-size: 25px;
+    width: 330px;
+    height: 110px;
+    border-radius: 30px;
+    float: left;
+    background-color: rgba(255, 255, 255, 0.605);
+}
+.head img{
+    width: 70px;
+    height: 70px;
+    margin-left: 80px;
+    margin-right: 10px;
+}
+.table{
+    box-shadow: 3px 5px rgba(0, 0, 0, 0.171);
+    float: left;
+    margin-left: 40px;
+    margin-top: 40px;
+    border-radius: 20px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.605);
+    width: 1073px;
+}
+.table h3{
+    color: darkblue;
+    margin-left: 30px;
+    font-family: 'Calibri';
+    font-size: 25px;
+}
+.table table{
+    float: left;
+    font-weight: bold;
+    color: rgb(31, 31, 154);
+    margin-top: -20px;
+    font-family: 'Calibri';
+    font-size: 25px;
+    background-color: rgba(255, 255, 255, 0.658);
+    margin-left: 30px;
+    width: 1000px;
+    height: 300px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+}
+.red{
+    color: rgb(232, 0, 66);
+}
+.clr{
+    color: rgb(18, 199, 90);
+}
+.header{
+    height: 60px;
+}
+.note{
+    width: 25px;
+    color: orange;
+}
+.chart-container {
+    background-color: rgba(255, 255, 255, 0.658);
+    border-radius: 20px;
+    padding: 10px;
+    width: 1050px;
+    height: 310px;
+    margin-top: 40px;
+    margin-left: 40px;
+    display: flex;
+    float: left;
+    box-shadow: 3px 5px rgba(0, 0, 0, 0.171);
+}
+    
+.info {
+    flex: 1;
+    padding-right: 0px;
+ }
+    
+.info h2 {
+    color: rgb(26, 70, 132);
+    font-size: 22px;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.value {
+    width: 350px;
+    margin-top: 200px ;
+    color: navy;
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+    
+.date {
+    color: navy;
+    font-size: 18px;
+    padding-left: 20px;
+}
+    
+.line-chart {
+    flex: 3;
+    margin-left: -125px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+         
+}
+#financeChart {
+  width: 700px !important;
+  height: 310px !important;
+}
+
+i{
+    font-size: 25px;
+}
+.dropdown-header {
+    padding: 8px 10px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #555;
+    position: absolute;
+    top: -80px;
+    right: -10px;  
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #555;
+}
+
+.close-btn:hover {
+    color: #ff0000;
+}
+.log-out{
+    font-size: 12pt;
+}
+.log-out button{
+    margin-top: -10px;
+    background-color: #ff0000;
+    width: 70px;
+    color:#ffffff;
+    height: 27px;
+    border-radius: 5px;
+}
+.log-out button:hover{
+    background-color: #ec9090;
+}

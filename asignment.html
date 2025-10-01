@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web ក្រុមទី 4</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+     
+    
+</head>
+<body>
+    <div class="container">
+        <div class="logo"><img src="bag.jpg" alt=""></div>
+        <div class="menu">
+            <ul>
+                <li><a href=""><i class="fa-solid fa-house"></i>&emsp13;Dashboard</a></li>
+                <li><a href=""><i class="fa-sharp fa-solid fa-building-columns"></i>   Products</a></li>
+                <li><a href=""><i class="fa-solid fa-arrows-rotate fa-flip-horizontal"></i> Category</a></li>
+                <li><a href=""><i class="fa-solid fa-chart-line"></i>   Sale</a></li>
+                <li><a href=""><i class="fa-solid fa-wallet"></i> Reports</a></li>
+                <li><a href=""><i class="fa-solid fa-gear"></i> Setting</a></li>
+                <div class="logout"><button><i class="fa-solid fa-power-off"></i>  Log Out</button></div>
+            </ul>
+        </div>
+        <div class="good">
+           <p> Good morning, Bunleab!</p>
+           <div class="sms">
+                <div class="wrap">
+                    <button id="messageBtn"><i class="fa-regular fa-message fa-2xl" style="color: #ffffff;"></i>
+                        <span class="badge">1</span>
+                    </button>
+                </div>
+
+                <div class="dropdown" id="messageDropdown">
+                    <button class="close-btn" onclick="closeMessage()">&times;</button>
+                    <div class="item">&#9432;&emsp;<b>លោក ហាក់ សុផា</b><br>&emsp;&emsp;សួស្ដី!<br>&emsp;&emsp;ល្មមសងលុយដែលបានជំពាក់ហើយ<br>&emsp;&emsp;អរគុណជម្រាបលា💥</div>
+                </div>
+
+                <div class="wrap">
+                    <button id="bellBtn"><i class="fa-regular fa-bell fa-2xl" style="color: #ffffff;"></i>
+                        <span class="badge">3</span>
+                    </button>
+                </div>
+
+                <div class="dropdown0" id="bellDropdown">
+                    <div class="item">
+                        <span class="title">📦 Low Stock</span>
+                        <span class="message"><br>RAM is almost gone! only 3 left.</span>
+                    </div>
+                    <div class="time">9:41 AM</div>
+                    <hr>
+                    <div class="item">
+                        <span class="title">💳 Payment</span>
+                        <span class="message"><br>Mr. Bee need to pay back tomorrow!</span>
+                    </div>
+                    <div class="time">9:41 AM</div>
+                    <hr>
+                    <div class="item">
+                        <span class="title">📅 Deadline</span>
+                        <span class="message"><br>Complete your assignment ASAP!!</span>
+                    </div>
+                    <div class="time">9:41 AM</div>
+                    <hr>
+                </div>
+
+                <div class="wrap">
+                    <button id="bell1Btn"><img src="profile.jpg" alt=""></button>
+                </div>
+                
+                <div class="dropdown1" id="bell1Dropdown">
+                    <div class="dropdown-header">
+                        <span class="title">Profile</span>
+                        <button class="close-btn" onclick="closeDropdown()">×</button>
+                    </div>
+
+                    <div class="item">
+                        <span class="message1">
+                            <ul type="round">
+                                <li>Manage Profile</li>
+                                <li>Setting</li>
+                            </ul>
+                        </span>
+                    </div>
+
+                    <div class="item">
+                        <div class="log-out">
+                            <button>Log out</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>  
+        </div>
+
+        <div class="head">
+            <div>
+                <span style="color: blueviolet;">CUSTOMERS</span><br>
+                <span style="color: rgb(14, 189, 14);">31.210</span>
+            </div>
+            
+            <i class="fa-regular fa-user fa-2xl" style="color: #7847ff; margin-left: 100px;"></i>
+        </div>
+
+        <div class="head">
+            <div>
+                <span style="color: rgb(57, 187, 253);">INCOMES</span><br>
+                <span style="color: rgb(69, 4, 182);">$980,530</span>
+            </div>
+            <i class="fa-solid fa-dollar-sign fa-2xl" style="color: #1a9cff; margin-left: 130px;"></i>
+        </div>
+
+        <div class="head">
+            <div>
+                <span style="color: rgb(252, 79, 154);">PRODUCTS SOLD</span><br>
+                <span style="color: orange;">$25,280</span>
+            </div>
+            <i class="fa-solid fa-signal fa-2xl" style="color: #fc4f9a; margin-left: 70px;"></i>
+        </div>
+
+        <div class="chart-container">
+
+            <div class="info">
+              <h2>Finance Flow</h2>
+              <div class="value">$52,210</div>
+              <div class="date">August 2025</div>
+            </div>
+
+            <div class="line-chart">
+              <canvas id="financeChart" ></canvas>
+            </div>
+        </div>
+
+        
+        
+        <div class="table">
+            <h3>Recent Orders</h3>
+            <table border="1">
+                <tr class="header">
+                    <th align="center">No</th>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td align="center">1</td>
+                    <td>RTX 5090</td>
+                    <td align="center">30</td>
+                    <td class="red">Pending</td>
+                    <td align="center"><i class="fa-regular fa-pen-to-square" style="color: #ff8800;"></i> <i class="fa-regular fa-trash-can" style="color: #e60000;"></i></td>
+                </tr>
+                <tr>
+                    <td align="center">2</td>
+                    <td>ASUS Monitor LED</td>
+                    <td align="center">25</td>
+                    <td class="clr">Approved</td>
+                    <td align="center"><i class="fa-regular fa-pen-to-square" style="color: #ff8800;"></i> <i class="fa-regular fa-trash-can" style="color: #e60000;"></i></td>
+                </tr>
+                <tr>
+                    <td align="center">3</td>
+                    <td>Mainboard</td>
+                    <td align="center">20</td>
+                    <td class="clr">Approved</td>
+                    <td align="center"><i class="fa-regular fa-pen-to-square" style="color: #ff8800;"></i> <i class="fa-regular fa-trash-can" style="color: #e60000;"></i></td>
+                </tr>
+                <tr>
+                    <td align="center">4</td>
+                    <td>CPU</td>
+                    <td align="center">15</td>
+                    <td class="red">Pending</td>
+                    <td align="center"><i class="fa-regular fa-pen-to-square" style="color: #ff8800;"></i> <i class="fa-regular fa-trash-can" style="color: #e60000;"></i></td>
+                </tr>
+                <tr>
+                    <td align="center">5</td>
+                    <td>RAM</td>
+                    <td align="center">12</td>
+                    <td class="clr">Approved</td>
+                    <td align="center"><i class="fa-regular fa-pen-to-square" style="color: #ff8800;"></i> <i class="fa-regular fa-trash-can" style="color: #e60000;"></i></td>
+                </tr>
+                <tr>
+                    <td align="center">6</td>
+                    <td>SSD</td>
+                    <td align="center">16</td>
+                    <td class="red">Pending</td>
+                    <td align="center"><i class="fa-regular fa-pen-to-square" style="color: #ff8800;"></i> <i class="fa-regular fa-trash-can" style="color: #e60000;"></i></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+   
+    <script src="asignment.js"></script>
+
+</body>
+</html>
